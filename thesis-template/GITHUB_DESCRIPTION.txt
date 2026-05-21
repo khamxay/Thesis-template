@@ -1,1 +1,0 @@
-A LaTeX undergraduate thesis template for Lao and English thesis writing, supporting Saysettha OT and Times New Roman fonts with XeLaTeX.
