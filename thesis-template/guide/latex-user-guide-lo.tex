@@ -1,0 +1,98 @@
+\documentclass{../thesis}
+\input{../config/fonts}
+
+\begin{document}
+\begin{titlepage}
+\centering
+\vspace*{3cm}
+{\bfseries\fontsize{18pt}{24pt}\selectfont ຄູ່ມືການໃຊ້ LaTeX ສຳລັບນັກສຶກສາ\par}
+\vspace{1cm}
+{\engtext{\bfseries Lao Thesis Template User Guide}\par}
+\vfill
+{\fontsize{14pt}{18pt}\selectfont ສຳລັບແມ່ແບບບົດໂຄງການຈົບຊັ້ນ\par}
+\end{titlepage}
+
+\tableofcontents
+\clearpage
+
+\chapter{LaTeX ແມ່ນຫຍັງ}
+LaTeX ແມ່ນລະບົບຈັດຮູບແບບເອກະສານທີ່ນິຍົມໃຊ້ໃນວຽກວິຊາການ ບົດວິຈັຍ ບົດຈົບ ແລະ ໜັງສື. ນັກສຶກສາຂຽນເນື້ອຫາໃນໄຟລ໌ \texttt{.tex} ແລ້ວໃຫ້ LaTeX ຈັດໜ້າ ເລກໜ້າ ສາລະບານ ຮູບ ຕາຕະລາງ ແລະ ບັນນານຸກົມໃຫ້ອັດຕະໂນມັດ.
+
+\chapter{ການຕິດຕັ້ງ}
+\section{TeX Live ຫຼື MiKTeX}
+ຖ້າໃຊ້ Windows ສາມາດຕິດຕັ້ງ MiKTeX. ຖ້າໃຊ້ macOS ສາມາດຕິດຕັ້ງ MacTeX. ຖ້າໃຊ້ Linux ສາມາດຕິດຕັ້ງ TeX Live. ຫຼັງຈາກຕິດຕັ້ງແລ້ວ ກວດວ່າມີຄຳສັ່ງ \texttt{xelatex} ແລະ \texttt{biber}.
+
+\section{Overleaf}
+Overleaf ເປັນເວັບໄຊສຳລັບຂຽນ LaTeX ອອນລາຍ. ອັບໂຫຼດໂຟນເດີ \texttt{thesis-template} ເຂົ້າ Overleaf, ເປີດ Menu, ແລ້ວເລືອກ Compiler ເປັນ XeLaTeX.
+
+\section{ຟອນ Saysettha OT}
+ຕິດຕັ້ງ Saysettha OT ໃນລະບົບປະຕິບັດການ ຫຼື ວາງໄຟລ໌ຟອນໃນໂຟນເດີ \texttt{fonts/} ດ້ວຍຊື່ \texttt{saysettha\_ot.ttf}. ຟອນ Times New Roman ມັກຈະມີຢູ່ໃນ Windows; ຖ້າບໍ່ມີ ແມ່ແບບຈະໃຊ້ TeX Gyre Termes ແທນ.
+
+\chapter{ການໃຊ້ແມ່ແບບ}
+\section{ເປີດໄຟລ໌ main.tex}
+ໄຟລ໌ຫຼັກຂອງບົດແມ່ນ \texttt{main.tex}. ໄຟລ໌ນີ້ຮວບຮວມປົກ ໜ້າຮັບຮອງ ບົດຄັດຫຍໍ້ ບົດທີ 1 ຫາ 5 ເອກະສານອ້າງອີງ ແລະ ພາກຜະນວກ.
+
+\section{ແກ້ຂໍ້ມູນຫົວບົດ}
+ເປີດ \texttt{config/settings.tex} ແລ້ວແກ້ຊື່ມະຫາວິທະຍາໄລ ຄະນະ ພາກວິຊາ ຊື່ບົດ ຊື່ນັກສຶກສາ ລະຫັດນັກສຶກສາ ອາຈານຜູ້ນຳພາ ແລະ ສົກສຶກສາ.
+
+\section{ຂຽນບົດ}
+ໄຟລ໌ບົດຢູ່ໃນໂຟນເດີ \texttt{chapters/}. ແກ້ໄຟລ໌ຕາມບົດທີ່ຕ້ອງການ. ໃຊ້ \verb|\chapter{...}| ສຳລັບບົດ, \verb|\section{...}| ສຳລັບຫົວຂໍ້ໃຫຍ່, ແລະ \verb|\subsection{...}| ສຳລັບຫົວຂໍ້ຍ່ອຍ.
+
+\chapter{ຮູບ ແລະ ຕາຕະລາງ}
+\section{ໃສ່ຮູບ}
+ວາງຮູບໃນໂຟນເດີ \texttt{figures/} ແລ້ວໃຊ້:
+\begin{verbatim}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.7\textwidth]{figures/sample-figure.png}
+  \caption{ຄຳອະທິບາຍຮູບ}
+  \label{fig:myfigure}
+\end{figure}
+\end{verbatim}
+ອ້າງຮູບດ້ວຍ \verb|\ref{fig:myfigure}|.
+
+\section{ໃສ່ຕາຕະລາງ}
+ໃຊ້ \texttt{table} ແລະ \texttt{tabularx} ສຳລັບຕາຕະລາງ. ຄຳອະທິບາຍຕາຕະລາງຈະຢູ່ເທິງຕາຕະລາງຕາມຮູບແບບແມ່ແບບ.
+
+\chapter{ການອ້າງອີງ}
+ເພີ່ມລາຍການອ້າງອີງໃນ \texttt{references/references.bib}. ໃນເນື້ອຫາໃຊ້ \verb|\cite{key}|. ຖ້າບັນນານຸກົມບໍ່ສະແດງ ໃຫ້ຄອມໄພລ໌ຕາມລຳດັບ XeLaTeX, Biber, XeLaTeX, XeLaTeX.
+
+\chapter{ພາກຜະນວກ}
+ໄຟລ໌ພາກຜະນວກຢູ່ໃນ \texttt{appendices/}. ຖ້າຕ້ອງການເພີ່ມພາກຜະນວກໃໝ່ ໃຫ້ສ້າງໄຟລ໌ \texttt{.tex} ແລ້ວເພີ່ມ \verb|\input{appendices/filename}| ໃນ \texttt{main.tex}.
+
+\chapter{ການສ້າງ PDF}
+ຖ້າໃຊ້ command line ໃຫ້ພິມ:
+\begin{verbatim}
+make pdf
+\end{verbatim}
+ຖ້າບໍ່ມີ Make ໃຫ້ຮັນ:
+\begin{verbatim}
+xelatex main.tex
+biber main
+xelatex main.tex
+xelatex main.tex
+\end{verbatim}
+
+\chapter{ບັນຫາທີ່ພົບເລື້ອຍ}
+\section{Font not found}
+ຖ້າພົບຂໍ້ຜິດພາດຟອນ ໃຫ້ຕິດຕັ້ງ Saysettha OT ຫຼື ວາງໄຟລ໌ \texttt{saysettha\_ot.ttf} ໃນ \texttt{fonts/}.
+
+\section{ພາສາລາວສະແດງບໍ່ຖືກ}
+ກວດວ່າໃຊ້ XeLaTeX ຫຼື LuaLaTeX ບໍ່ແມ່ນ pdfLaTeX. ກວດວ່າໄຟລ໌ບັນທຶກເປັນ UTF-8.
+
+\section{Bibliography ບໍ່ສະແດງ}
+ຮັນ \texttt{biber main} ຫຼັງຈາກຮັນ XeLaTeX ຄັ້ງທຳອິດ ແລ້ວຮັນ XeLaTeX ອີກສອງຄັ້ງ.
+
+\section{Image not found}
+ກວດຊື່ໄຟລ໌ ນາມສະກຸນໄຟລ໌ ແລະ path ໃຫ້ຖືກຕ້ອງ. ແນະນຳໃຫ້ໃຊ້ຊື່ໄຟລ໌ພາສາອັງກິດບໍ່ມີຊ່ອງວ່າງ.
+
+\chapter{ກ່ອນສົ່ງບົດ}
+\begin{enumerate}
+  \item ກວດຊື່ບົດ ຊື່ນັກສຶກສາ ແລະ ອາຈານຜູ້ນຳພາ.
+  \item ກວດສາລະບານ ສາລະບານຮູບ ແລະ ສາລະບານຕາຕະລາງ.
+  \item ກວດການອ້າງອີງທຸກລາຍການ.
+  \item ກວດວ່າ PDF ສະແດງພາສາລາວຖືກຕ້ອງ.
+  \item ສົ່ງ PDF ສຸດທ້າຍຕາມຂໍ້ກຳນົດຂອງພາກວິຊາ.
+\end{enumerate}
+
+\end{document}
