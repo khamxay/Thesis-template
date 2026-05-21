@@ -1,0 +1,42 @@
+# LaTeX build files
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+*.lof
+*.lot
+*.idx
+*.ilg
+*.ind
+*.nav
+*.snm
+*.vrb
+
+# Local build folders
+build/
+_output/
+_temp/
+
+# Temporary/editor files
+*.tmp
+*.bak
+*.swp
+.DS_Store
+Thumbs.db
+
+# Generated thesis build name; keep the distributable sample PDF.
+main.pdf
+!sample-output.pdf
+
+# Do not commit external font files.
+fonts/*.ttf
+fonts/*.otf
+fonts/*.TTF
+fonts/*.OTF
