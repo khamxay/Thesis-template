@@ -1,0 +1,4 @@
+Place local font files here if they are not installed on your computer.
+
+Suggested filename for Lao font:
+saysettha_ot.ttf
