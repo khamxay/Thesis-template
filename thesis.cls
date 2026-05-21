@@ -5,7 +5,7 @@
 
 \RequirePackage{iftex}
 \ifPDFTeX
-  \ClassError{thesis}{This class requires XeLaTeX or LuaLaTeX}{Compile with xelatex or lualatex. pdfLaTeX cannot render Lao fonts correctly.}
+  \ClassError{thesis}{This thesis template requires XeLaTeX or LuaLaTeX}{Please change your compiler to XeLaTeX. In Overleaf: Menu -> Settings -> Compiler -> XeLaTeX. pdfLaTeX cannot render Lao fonts correctly.}
 \fi
 
 \RequirePackage{geometry}

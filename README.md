@@ -1,5 +1,12 @@
 # NUOL Lao Undergraduate Thesis LaTeX Template
 
+## Important
+
+This template must be compiled with XeLaTeX.
+Do not use pdfLaTeX because pdfLaTeX cannot render Lao fonts correctly and does not support `fontspec`.
+
+If you see an error from `fontspec`, change the compiler to XeLaTeX.
+
 ## ພາສາລາວ
 
 ### ພາບລວມ
@@ -57,6 +64,8 @@ thesis-template/
 
 ### ການ Compile
 
+Important: This template must be compiled with XeLaTeX. Do not use pdfLaTeX because pdfLaTeX cannot render Lao fonts correctly and does not support `fontspec`.
+
 ໃຊ້ Makefile:
 
 ```bash
@@ -86,6 +95,14 @@ xelatex -jobname=sample-output main.tex
 ### ການໃຊ້ກັບ Overleaf
 
 Upload ໂຟນເດີນີ້ເຂົ້າ Overleaf, ໄປທີ່ Menu, ແລ້ວເລືອກ Compiler ເປັນ XeLaTeX. ຖ້າ Overleaf ບໍ່ມີ Saysettha OT, ນັກສຶກສາຕ້ອງ upload ຟອນເຂົ້າ `fonts/` ສຳລັບການໃຊ້ສ່ວນຕົວ ແຕ່ບໍ່ຄວນ commit ໄຟລ໌ຟອນເຂົ້າ GitHub.
+
+How to set XeLaTeX in Overleaf:
+
+- Open the project in Overleaf.
+- Click Menu.
+- Go to Settings.
+- Change Compiler from pdfLaTeX to XeLaTeX.
+- Click Recompile.
 
 ### ນັກສຶກສາຄວນແກ້ຫຍັງ
 
@@ -146,6 +163,8 @@ This is a GitHub-ready LaTeX undergraduate thesis template for Lao and English a
 
 ### Compile With XeLaTeX
 
+Important: This template must be compiled with XeLaTeX. Do not use pdfLaTeX because pdfLaTeX cannot render Lao fonts correctly and does not support `fontspec`.
+
 ```bash
 xelatex main.tex
 biber main
@@ -177,6 +196,14 @@ make clean
 
 Upload the repository to Overleaf and set the compiler to XeLaTeX. Upload Saysettha OT into `fonts/` only for private compilation if Overleaf cannot find it. Do not commit font files to GitHub.
 
+How to set XeLaTeX in Overleaf:
+
+- Open the project in Overleaf.
+- Click Menu.
+- Go to Settings.
+- Change Compiler from pdfLaTeX to XeLaTeX.
+- Click Recompile.
+
 ### Editing Guide
 
 - Thesis information: edit `config/settings.tex`.
@@ -199,6 +226,8 @@ Replace `YOUR-USERNAME` with the real GitHub username or organization name.
 
 ### Troubleshooting
 
+- Problem: `fontspec package requires either XeTeX or LuaTeX`
+  Solution: Change compiler to XeLaTeX.
 - `font not found`: install Saysettha OT or check `fonts/README-fonts.txt`.
 - Lao text is not rendered correctly: compile with XeLaTeX or LuaLaTeX, not pdfLaTeX.
 - Bibliography is missing: run Biber between XeLaTeX passes.

@@ -10,7 +10,7 @@ all: pdf guide
 
 pdf:
 	$(LATEX) -jobname=$(SAMPLE) $(MAIN).tex
-	$(BIBER) $(SAMPLE)
+	$(BIBER) $(SAMPLE) || true
 	$(LATEX) -jobname=$(SAMPLE) $(MAIN).tex
 	$(LATEX) -jobname=$(SAMPLE) $(MAIN).tex
 
